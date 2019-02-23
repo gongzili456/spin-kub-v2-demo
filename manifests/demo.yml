@@ -33,11 +33,11 @@ spec:
       - name: primary
         image: gognzili/simpleapp
         ports:
-        - containerPort: 8000
+        - containerPort: 8001
         readinessProbe:
           httpGet:
             path: /
-            port: 8000
+            port: 8001
         envFrom:
         - configMapRef:
             name: spinnaker-demo-config
@@ -56,4 +56,4 @@ spec:
   ports:
   - protocol: TCP
     port: 80
-    targetPort: 8000
+    targetPort: 8001
