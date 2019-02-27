@@ -29,9 +29,11 @@ spec:
         source: demo
         app: spinnaker
     spec:
+      imagePullSecrets:
+      - name: regcred
       containers:
       - name: primary
-        image: gognzili/simpleapp
+        image: registry.cn-beijing.aliyuncs.com/cella-images/spin-kub-v2-demo
         ports:
         - containerPort: 8000
         readinessProbe:
